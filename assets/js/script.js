@@ -16,6 +16,7 @@ function consultarAPI(IDSuperHero) {
     url: `https://www.superheroapi.com/api.php/4905856019427443/${IDSuperHero}`,
     dataType: "json",
     success: (hero) => {
+      $(".resultado").hide();
       // Carga datos en la tarjeta
       $(".card-title").text(`Nombre: ${hero.name}`);
       $(".connections").text(
@@ -37,7 +38,8 @@ function consultarAPI(IDSuperHero) {
         aliases += ` ${alias}`;
         $(".aliases").text(aliases);
       });
-      $(".img-fluid").attr("src", hero.image.url);
+      $(".imgHero").attr("src", hero.image.url);
+
       //Carga datos en el grafico
       var chart = new CanvasJS.Chart("chartContainer", {
         theme: "light2",
@@ -67,6 +69,10 @@ function consultarAPI(IDSuperHero) {
         ],
       });
       chart.render();
+      $(".resultado").toggle();
+    },
+    error: function (error) {
+      alert(error + " No se pudo cargar la información, intente nuevamente");
     },
   });
 }

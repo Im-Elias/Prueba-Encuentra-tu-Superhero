@@ -24,60 +24,60 @@
       </div>
     </nav>
 
-    <div class="text-center">
-      <img src="assets/img/sh1.jpg" alt="Logo SuperHero">
+    <div class="text-center container">
+      <img src="assets/img/sh1.jpg" alt="Logo SuperHero" class="img-fluid">
     </div>
   </header>
 
-  <main>
-    <section>
-      <h1>Encuentra tu SuperHero</h1>
-      <form id="Forma" class="form-floating">
+  <main class="container mt-5">
+    <section class="buscar container-fluid">
+      <h1 class="text-center">Encuentra tu SuperHero</h1>
+      <form id="Forma" class="form-floating d-grid gap-2 mt-5">
         <input type="number" class="form-control" id="floatingInputValue" min="1" max="731">
         <label for="floatingInputValue">Ingresa un número entre 1 y 731</label>
         <button type="submit" class="btn btn-primary btn-lg" form="Forma">Buscar</button>
       </form>
+    </section>
 
-      <div class="row">
-        <div class="col-6">
-          <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="assets/img/sh2.jpg" class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Nombre: Nombre</h5>
-                  <p class="card-text connections">Conexiones: This is a wider card with supporting text below as a
-                    natural lead-in
-                    to
-                    additional content.
-                    This content is a little bit longer.</p>
-                  <p class="card-text"><small class="publisher">Publicado por: </small></p>
-                  <hr>
-                  <p class="card-text"><small class="occupation">Ocupacion: </small></p>
-                  <hr>
-                  <p class="card-text"><small class="first-appearance">Primera aparicion:</small></p>
-                  <hr>
-                  <p class="card-text"><small class="height">Altura: </small></p>
-                  <hr>
-                  <p class="card-text"><small class="weight">Peso: </small></p>
-                  <hr>
-                  <p class="card-text"><small>Aliases:</small><small class="aliases"></small></p>
-                </div>
+    <section class="resultado mt-4" style="display: none;">
+      <div class="row justify-content-center align-items-center">
+        <div class="card mb-3 col-12 col-lg-6" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="assets/img/sh2.jpg" class="img-fluid imgHero" alt="..." style="height: 100%;object-fit: cover;">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Nombre: Nombre</h5>
+                <p class="card-text connections">Conexiones: This is a wider card with supporting text below as a
+                  natural lead-in
+                  to
+                  additional content.
+                  This content is a little bit longer.</p>
+                <p class="card-text mb-1"><small class="publisher">Publicado por: </small></p>
+                <hr class="my-1">
+                <p class="card-text mb-1"><small class="occupation">Ocupacion: </small></p>
+                <hr class="my-1">
+                <p class="card-text mb-1"><small class="first-appearance">Primera aparicion:</small></p>
+                <hr class="my-1">
+                <p class="card-text mb-1"><small class="height">Altura: </small></p>
+                <hr class="my-1">
+                <p class="card-text mb-1"><small class="weight">Peso: </small></p>
+                <hr class="my-1">
+                <p class="card-text mb-1"><small>Aliases:</small><small class="aliases"></small></p>
               </div>
             </div>
           </div>
         </div>
-
-        <div id="chartContainer" style="height: 370px; width: 50%;" class="col-6"></div>
+        <div id="chartContainer" style="height: 370px; width: 50%;" class="col-12 col-lg-6"></div>
       </div>
     </section>
 
+
   </main>
 
-  <footer class="bg-dark text-light">
-    <p>Josué Gallardo</p>
+  <footer class="">
+    <p class="text-center mt-5">Josué Gallardo - Bootcamp Talento Digital 2024</p>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
