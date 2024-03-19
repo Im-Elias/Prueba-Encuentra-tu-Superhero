@@ -17,7 +17,7 @@ $(() => {
     let IDSuperHero = validarHero();
     // Si la información es válida, realizar la consulta a la API
     if (IDSuperHero !== null) {
-      $("#Forma").consultaAPI(IDSuperHero);
+      $(".resultado").consultaAPI(IDSuperHero);
     }
   });
 });
