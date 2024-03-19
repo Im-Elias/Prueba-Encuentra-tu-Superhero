@@ -5,7 +5,7 @@ jQuery.fn.consultaAPI = function (IDSuperHero) {
     dataType: "json",
     success: (hero) => {
       //Esconde la seccion de resultados para la carga de datos
-      $(".resultado").hide();
+      this.hide();
 
       // Carga datos en la tarjeta
       $(".card-title").text(`Nombre: ${hero.name}`);
@@ -60,7 +60,7 @@ jQuery.fn.consultaAPI = function (IDSuperHero) {
       });
       chart.render();
       //Muestra la seccion de resultados
-      $(".resultado").toggle();
+      this.toggle();
     },
     error: function (error) {
       alert(error + " No se pudo cargar la información, intente nuevamente");
